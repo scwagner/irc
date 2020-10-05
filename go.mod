@@ -1,6 +1,6 @@
-module gopkg.in/irc.v3
+module github.com/scwagner/irc
 
-go 1.13
+go 1.14
 
 require (
 	github.com/stretchr/testify v1.4.0
