@@ -1,4 +1,4 @@
-module github.com/scwagner/irc
+module github.com/scwagner/irc/v3
 
 go 1.14
 
