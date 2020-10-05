@@ -12,6 +12,7 @@ import (
 // ClientConfig is a structure used to configure a Client.
 type ClientConfig struct {
 	// General connection information.
+	AuthUser string
 	Nick string
 	Pass string
 	User string
@@ -290,7 +291,7 @@ func (c *Client) RunContext(ctx context.Context) error {
 	c.currentNick = c.config.Nick
 
 	if c.config.Pass != "" {
-		c.Writef("PASS :%s", c.config.Pass)
+		c.Writef("PASS %s:%s", c.config.AuthUser, c.config.Pass)
 	}
 
 	c.maybeStartCapHandshake()
